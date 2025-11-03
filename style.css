@@ -1,0 +1,7 @@
+ html { scroll-behavior: smooth; }
+      @keyframes slide-x {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-50%); }
+      }
+      @keyframes caret-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+      #typewriter::after { content: '|'; margin-left: 2px; animation: caret-blink 1s step-end infinite; }

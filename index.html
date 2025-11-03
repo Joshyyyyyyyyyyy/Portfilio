@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Joshua Suruiz</title>
+   
+ </head>
+ <body class="bg-neutral-900">
+  <!-- Navbar -->
+  <nav id="site-nav" class="fixed inset-x-0 top-0 z-[60] transition-transform duration-500 ease-out opacity-0 -translate-y-full">
+    <div class="px-4 sm:px-6 md:px-8">
+      <div class="mx-auto max-w-7xl mt-6">
+        <div class="rounded-3xl bg-neutral-600/90 text-white shadow-lg ring-1 ring-black/10 backdrop-blur">
+          <div class="flex h-20 items-center justify-between px-6 md:px-8">
+            <a href="#home" class="flex items-center gap-2">
+              <img src="img/logo.png" alt="Suruiz" class="h-14 w-auto md:h-16" />
+            </a>
+            <!-- Desktop menu -->
+            <div class="hidden md:flex items-center gap-8 text-sm md:text-base uppercase tracking-wider text-white/90">
+              <a href="#home" class="hover:text-white">Home</a>
+              <a href="#about" class="hover:text-white">About</a>
+              <a href="#projects" class="hover:text-white">Project</a>
+              <a href="#skills" class="hover:text-white">Skills</a>
+              <a href="#contact" class="hover:text-white">Contact</a>
+            </div>
+            <!-- Mobile toggle -->
+            <button id="menu-btn" class="md:hidden p-3 text-white" aria-expanded="false" aria-controls="mobile-menu">
+              <svg data-icon="open" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+              <svg data-icon="close" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <!-- MOBILE MENU lives OUTSIDE the h-12 row -->
+          <div id="mobile-menu" class="md:hidden w-full overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-out rounded-b-3xl bg-neutral-600/90">
+            <div class="flex flex-col space-y-4 px-6 py-4 text-white/90 text-base">
+              <a href="#home" class="hover:text-white mobile-link">Home</a>
+              <a href="#about" class="hover:text-white mobile-link">About</a>
+              <a href="#projects" class="hover:text-white mobile-link">Project</a>
+              <a href="#skills" class="hover:text-white mobile-link">Skills</a>
+              <a href="#contact" class="hover:text-white mobile-link">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Backdrop for mobile menu -->
+      <div id="mobile-backdrop" class="md:hidden fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 ease-out"></div>
+    </div>
+  </nav>
+
+     <main>
+   <section id="home" class="relative min-h-screen bg-neutral-900 text-white border-b border-neutral-800/80 pb-0 flex items-center scroll-mt-28">
+      <div class="max-w-screen-2xl mx-auto px-6 lg:px-10 py-8 md:py-12 grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6 items-center w-full reveal opacity-0 translate-y-8 transition-all duration-700 ease-out">
+        <!-- reduced right padding from lg:pr-20 to lg:pr-4 and reduced gap between columns to bring text closer to image -->
+        <div class="space-y-7 self-center md:pr-4 lg:pr-4 z-10 max-w-xl text-center md:text-left" data-dir="left">
+          <div class="flex items-center gap-4">
+            <span class="px-3 py-1 bg-neutral-800 rounded text-sm">Hi, I am</span>
+            <span class="h-px w-32 bg-neutral-600"></span>
+          </div>
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight whitespace-nowrap">Joshua Suruiz</h1>
+          <p class="text-neutral-300 text-2xl lg:text-3xl">and I'm <span id="typewriter" class="font-semibold">Programmer</span></p>
+          <a href="#" class="inline-flex items-center justify-center rounded-md bg-white text-neutral-900 font-semibold px-7 py-3.5 lg:px-8 lg:py-4 shadow transition-colors hover:bg-neutral-200 w-full sm:w-auto">Download CV</a>
+          <div class="space-y-3">
+            <p class="text-2xl text-neutral-300 font-semibold">My Socials</p>
+            <div class="flex items-center justify-center md:justify-start gap-5 text-neutral-300">
+              <a href="#" aria-label="Facebook" class="p-2 hover:text-[#1877F2]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-9 h-9"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5.01 3.66 9.16 8.44 9.94v-7.03H7.9v-2.9h2.54V9.41c0-2.5 1.5-3.88 3.8-3.88 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.9h-2.34V22c4.78-.78 8.44-4.93 8.44-9.94Z"/></svg>
+              </a>
+              <a href="#" aria-label="GitHub" class="p-2 hover:text-[#58A6FF]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-9 h-9"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.589 2 12.253c0 4.529 2.865 8.367 6.839 9.725.5.094.682-.22.682-.487 0-.24-.009-.877-.014-1.722-2.782.616-3.369-1.36-3.369-1.36-.455-1.178-1.11-1.492-1.11-1.492-.907-.636.069-.623.069-.623 1.003.072 1.53 1.05 1.53 1.05.892 1.56 2.341 1.11 2.91.848.091-.662.35-1.11.636-1.366-2.222-.257-4.555-1.137-4.555-5.062 0-1.118.39-2.032 1.03-2.748-.103-.257-.447-1.293.098-2.695 0 0 .84-.27 2.75 1.05A9.38 9.38 0 0 1 12 7.06c.85.004 1.705.116 2.504.34 1.908-1.32 2.747-1.05 2.747-1.05.546 1.402.202 2.438.1 2.695.64.716 1.028 1.63 1.028 2.748 0 3.936-2.336 4.802-4.563 5.055.36.32.68.95.68 1.915 0 1.382-.013 2.497-.013 2.837 0 .27.18.586.688.486A10.03 10.03 0 0 0 22 12.253C22 6.59 17.523 2 12 2Z" clip-rule="evenodd"/></svg>
+              </a>
+              <a href="#" aria-label="LinkedIn" class="p-2 hover:text-[#0A66C2]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-9 h-9"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.5 8.5h4V23h-4V8.5Zm7 0h3.84v1.98h.05c.54-1.02 1.86-2.1 3.83-2.1 4.1 0 4.86 2.7 4.86 6.2V23h-4v-6.5c0-1.55-.03-3.55-2.17-3.55-2.17 0-2.5 1.7-2.5 3.45V23h-4V8.5Z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="hidden lg:block"><!-- spacer to balance grid on large screens --></div>
+        <!-- reduced text-right padding and adjusted spacing to bring right column closer to center image -->
+        <div class="space-y-7 self-center hidden lg:block lg:pr-4" data-dir="right">
+          <div class="flex items-center gap-4 justify-end">
+            <span class="h-px w-32 bg-neutral-600"></span>
+            <span class="px-3 py-1 bg-neutral-800 rounded text-sm">Welcome</span>
+          </div>
+          <h2 class="text-2xl md:text-3xl font-semibold text-right">UI/UX DESIGNER</h2>
+          <p class="text-neutral-300 text-right text-lg">I craft responsive websites and smooth interactions. Available for freelance projects.</p>
+          <div class="flex justify-end">
+            <a href="#contact" class="inline-flex items-center justify-center rounded-md border border-neutral-600 text-white px-5 py-2 hover:bg-white hover:text-neutral-900 transition-colors">Contact Me</a>
+          </div>
+        </div>
+      </div>
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 hidden md:flex justify-center">
+        <div class="relative w-full max-w-screen-2xl flex justify-center">
+          <div class="absolute bottom-10 md:bottom-14 lg:bottom-16 left-1/2 -translate-x-1/2 w-[360px] h-[360px] md:w-[460px] md:h-[460px] lg:w-[520px] lg:h-[520px] bg-neutral-700/60 rounded-full"></div>
+          <img src="img/profile.png" alt="Profile" class="absolute bottom-0 left-1/2 -translate-x-1/2 object-contain w-[320px] h-[440px] md:w-[420px] md:h-[520px] lg:w-[480px] lg:h-[560px] grayscale"/>
+        </div>
+      </div>
+      <a href="#about" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-neutral-400 hover:text-white transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 animate-bounce">
+          <path d="M12 16.5a1 1 0 0 1-.7-.3l-6-6 1.4-1.4L12 13.1l5.3-4.3 1.4 1.4-6 6a1 1 0 0 1-.7.3Z"/>
+        </svg>
+      </a>
+    </section>
+
+
+    <section id="about" class="min-h-screen bg-neutral-900 text-white border-b border-neutral-800/80 flex items-center scroll-mt-28">
+      <div class="max-w-screen-2xl mx-auto px-6 lg:px-10 py-8 md:py-12 reveal opacity-0 translate-y-8 transition-all duration-700 ease-out">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6" data-dir="left">
+            <h2 class="text-3xl md:text-4xl font-extrabold">About Me</h2>
+            <p class="text-neutral-300 leading-relaxed">I'm Joshua Suruiz, a freelancer focused on building clean, responsive websites and smooth user experiences. I enjoy solving problems, designing simple UI, and shipping fast.</p>
+            <p class="text-neutral-300 leading-relaxed">I work across the stack and love collaborating with clients to turn ideas into polished products.</p>
+            <div class="flex gap-3">
+              <a href="#projects" class="inline-flex items-center justify-center rounded-md bg-white text-neutral-900 font-semibold px-5 py-2.5 hover:bg-neutral-200 transition">View Projects</a>
+              <a href="#contact" class="inline-flex items-center justify-center rounded-md border border-neutral-600 text-white px-5 py-2.5 hover:bg-white hover:text-neutral-900 transition">Hire Me</a>
+            </div>
+          </div>
+          <div class="hidden md:flex h-80 md:h-[28rem] rounded-3xl overflow-hidden bg-neutral-800/40 ring-1 ring-white/5 items-center justify-center">
+            <img src="img/about.png" alt="About" class="h-full w-auto object-contain grayscale"/>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="min-h-screen bg-neutral-900 text-white border-b border-neutral-800/80 flex items-center scroll-mt-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 reveal opacity-0 translate-y-8 transition-all duration-700 ease-out" data-dir="left">
+        <div class="mb-12">
+          <h2 class="text-3xl md:text-4xl font-extrabold">Projects</h2>
+          <p class="text-neutral-400 mt-2">Selected work demonstrating design and development.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- POS - JAVA -->
+          <article class="rounded-2xl bg-neutral-800/50 ring-1 ring-white/5 overflow-hidden">
+            <button type="button" class="group relative block h-56 w-full overflow-hidden" data-full="img/sales.png">
+              <img src="img/sales.png" alt="Sale and Inventory Management System screenshot" class="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"/>
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-transparent"></div>
+              <div class="pointer-events-none absolute top-0 left-0 right-0 p-4 flex items-start">
+                <h4 class="text-white text-sm sm:text-base font-semibold drop-shadow">Sale and Inventory Management System</h4>
+              </div>
+            </button>
+            <div class="p-6 space-y-3">
+              <p class="text-sm text-neutral-300">Desktop Point of Sale with billing, inventory, and reports.</p>
+              <div class="flex flex-wrap gap-3 text-base">
+                <i class="devicon-java-plain colored"></i>
+              </div>
+            </div>
+          </article>
+          <!-- Payment Management System -->
+          <article class="rounded-2xl bg-neutral-800/50 ring-1 ring-white/5 overflow-hidden">
+            <button type="button" class="group relative block h-56 w-full overflow-hidden" data-full="img/payment.png">
+              <img src="img/payment.png" alt="Payment Management System screenshot" class="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"/>
+            </button>
+            <div class="p-6 space-y-3">
+              <h3 class="font-semibold text-lg">Payment Management System</h3>
+              <p class="text-sm text-neutral-300">Web app to manage payments and records.</p>
+              <div class="flex flex-wrap items-center gap-3 text-base">
+                <i class="devicon-html5-plain colored"></i>
+                <i class="devicon-css3-plain colored"></i>
+                <i class="devicon-javascript-plain colored"></i>
+                <i class="devicon-php-plain colored"></i>
+              </div>
+            </div>
+          </article>
+          <!-- PLANT-GO Application Development -->
+          <article class="rounded-2xl bg-neutral-800/50 ring-1 ring-white/5 overflow-hidden">
+            <button type="button" class="group relative block h-56 w-full overflow-hidden" data-full="img/plantgo.png">
+              <img src="img/plantgo.png" alt="PlantGo app development screenshot" class="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"/>
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-transparent"></div>
+              <div class="pointer-events-none absolute top-0 left-0 right-0 p-4 flex items-start">
+                <h4 class="text-white text-sm sm:text-base font-semibold drop-shadow">PLANT-GO Application</h4>
+              </div>
+            </button>
+            <div class="p-6 space-y-3">
+              <p class="text-sm text-neutral-300">Mobile app for plant care using AI-assisted features.</p>
+              <div class="flex flex-wrap items-center gap-3 text-base">
+                <span class="px-2 py-0.5 text-xs rounded bg-emerald-500/20 text-emerald-300">IoT</span>
+                <i class="devicon-react-original colored"></i>
+                <i class="devicon-python-plain colored"></i>
+              </div>
+            </div>
+          </article>
+          <!-- DailyFit -->
+          <article class="rounded-2xl bg-neutral-800/50 ring-1 ring-white/5 overflow-hidden">
+            <button type="button" class="group relative block h-56 w-full overflow-hidden" data-full="img/Dailyfit.png">
+              <img src="img/Dailyfit.png" alt="DailyFit fitness tracking web app screenshot" class="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"/>
+            </button>
+            <div class="p-6 space-y-3">
+              <h3 class="font-semibold text-lg">DailyFit</h3>
+              <p class="text-sm text-neutral-300">Fitness tracking web app with user progress, workouts, and reports.</p>
+              <div class="flex flex-wrap items-center gap-3 text-base">
+                <i class="devicon-html5-plain colored"></i>
+                <i class="devicon-css3-plain colored"></i>
+                <i class="devicon-javascript-plain colored"></i>
+                <i class="devicon-php-plain colored"></i>
+                <i class="devicon-mysql-original colored"></i>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="min-h-[70vh] md:min-h-screen bg-neutral-900 text-white border-b border-neutral-800/80 flex items-center scroll-mt-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-12 reveal opacity-0 translate-y-8 transition-all duration-700 ease-out" data-dir="right">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-8 md:mb-12 text-center md:text-left">Skills</h2>
+        <!-- Icon-only marquee (real logos via Devicon) -->
+        <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/5 bg-neutral-800/30 py-4 md:py-6 px-2">
+          <div class="flex items-center gap-8 md:gap-12 whitespace-nowrap" style="animation: slide-x 22s linear infinite alternate;">
+            <!-- track duplicated for seamless loop -->
+            <div class="flex items-center gap-8 md:gap-12">
+              <i aria-label="HTML" class="devicon-html5-plain colored text-[40px] md:text-[56px]"></i>
+              <i aria-label="CSS" class="devicon-css3-plain colored text-[40px] md:text-[56px]"></i>
+              <i aria-label="JavaScript" class="devicon-javascript-plain colored text-[40px] md:text-[56px]"></i>
+              <i aria-label="Java" class="devicon-java-plain colored text-[40px] md:text-[56px]"></i>
+              <i aria-label="PHP" class="devicon-php-plain colored text-[40px] md:text-[56px]"></i>
+              <i aria-label="MySQL" class="devicon-mysql-original colored text-[40px] md:text-[56px]"></i>
+            </div>
+            <div class="flex items-center gap-8 md:gap-12">
+              <i aria-label="HTML" class="devicon-html5-plain colored text-[40px] md:text-[56px]"></i>
+              <i aria-label="CSS" class="devicon-css3-plain colored text-[40px] md:text-[56px]"></i>
+              <i aria-label="JavaScript" class="devicon-javascript-plain colored text-[40px] md:text-[56px]"></i>
+              <i aria-label="Java" class="devicon-java-plain colored text-[40px] md:text-[56px]"></i>
+              <i aria-label="PHP" class="devicon-php-plain colored text-[40px] md:text-[56px]"></i>
+              <i aria-label="MySQL" class="devicon-mysql-original colored text-[40px] md:text-[56px]"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="min-h-screen bg-neutral-900 text-white border-b border-neutral-800/80 flex items-center scroll-mt-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 reveal opacity-0 translate-y-8 transition-all duration-700 ease-out" data-dir="left">
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="space-y-6">
+            <h2 class="text-3xl md:text-4xl font-extrabold">Contact</h2>
+            <p class="text-neutral-300">Have a project in mind or want to collaborate? Send a message and I'll get back to you soon.</p>
+            <div>
+              <p class="text-neutral-400">Email</p>
+              <a href="mailto:suruizandrie@gmail.com" class="text-white underline">suruizandrie@gmail.com</a>
+            </div>
+          </div>
+          <form class="space-y-4 bg-neutral-800/40 p-6 rounded-2xl ring-1 ring-white/5">
+            <div class="grid md:grid-cols-2 gap-4">
+              <input type="text" placeholder="Name" class="w-full rounded-md bg-neutral-900/60 border border-neutral-700 px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-white/20" />
+              <input type="email" placeholder="Email" class="w-full rounded-md bg-neutral-900/60 border border-neutral-700 px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-white/20" />
+            </div>
+            <textarea rows="6" placeholder="Message" class="w-full rounded-md bg-neutral-900/60 border border-neutral-700 px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-white/20"></textarea>
+            <button type="submit" class="inline-flex items-center justify-center rounded-md bg-white text-neutral-900 font-semibold px-6 py-3 hover:bg-neutral-200 transition">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="img-modal" class="fixed inset-0 z-[90] hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div id="img-modal-backdrop" class="absolute inset-0 bg-black/80"></div>
+    <div class="relative z-10 flex h-[100svh] w-[100svw] items-center justify-center overflow-auto">
+      <img id="img-modal-img" src="" alt="Preview" class="m-2 max-w-[100svw] max-h-[90svh] sm:max-h-[92svh] object-contain rounded-md shadow-lg"/>
+      <button id="img-modal-close" type="button" aria-label="Close image" class="absolute text-white p-3 md:p-3.5 text-3xl md:text-4xl bg-black/40 hover:bg-black/60 rounded-full ring-1 ring-white/20" style="top: calc(env(safe-area-inset-top, 0px) + 12px); right: calc(env(safe-area-inset-right, 0px) + 12px);">×</button>
+    </div>
+  </div>
+
+  <footer class="bg-neutral-900 text-neutral-300 border-t border-neutral-800/80">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-10 py-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="space-y-4">
+        <div class="flex items-center gap-3">
+          <img src="img/logo.png" alt="Suruiz" class="h-10 w-auto" />
+          <span class="font-semibold tracking-wide">Suruiz</span>
+        </div>
+        <p class="text-sm text-neutral-400">Portfolio of Joshua Suruiz — Programmer, Freelancer, UI/UX Designer, and IT Student.</p>
+      </div>
+      <div class="space-y-3">
+        <h3 class="text-sm uppercase tracking-wider text-neutral-400">Quick Links</h3>
+        <nav class="flex flex-col gap-2 text-sm">
+          <a href="#home" class="hover:text-white">Home</a>
+          <a href="#about" class="hover:text-white">About</a>
+          <a href="#projects" class="hover:text-white">Projects</a>
+          <a href="#skills" class="hover:text-white">Skills</a>
+          <a href="#contact" class="hover:text-white">Contact</a>
+        </nav>
+      </div>
+      <div class="space-y-3">
+        <h3 class="text-sm uppercase tracking-wider text-neutral-400">Connect</h3>
+        <div class="flex items-center gap-3">
+          <a href="#" aria-label="Facebook" class="transition-colors p-2 rounded-full hover:text-[#1877F2] hover:bg-white/5 w-10 h-10 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5.01 3.66 9.16 8.44 9.94v-7.03H7.9v-2.9h2.54V9.41c0-2.5 1.5-3.88 3.8-3.88 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.9h-2.34V22c4.78-.78 8.44-4.93 8.44-9.94Z"/></svg>
+          </a>
+          <a href="#" aria-label="GitHub" class="transition-colors p-2 rounded-full hover:text-white hover:bg-[#181717] w-10 h-10 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.589 2 12.253c0 4.529 2.865 8.367 6.839 9.725.5.094.682-.22.682-.487 0-.24-.009-.877-.014-1.722-2.782.616-3.369-1.36-3.369-1.36-.455-1.178-1.11-1.492-1.11-1.492-.907-.636.069-.623.069-.623 1.003.072 1.53 1.05 1.53 1.05.892 1.56 2.341 1.11 2.91.848.091-.662.35-1.11.636-1.366-2.222-.257-4.555-1.137-4.555-5.062 0-1.118.39-2.032 1.03-2.748-.103-.257-.447-1.293.098-2.695 0 0 .84-.27 2.75 1.05A9.38 9.38 0 0 1 12 7.06c.85.004 1.705.116 2.504.34 1.908-1.32 2.747-1.05 2.747-1.05.546 1.402.202 2.438.1 2.695.64.716 1.028 1.63 1.028 2.748 0 3.936-2.336 4.802-4.563 5.055.36.32.68.95.68 1.915 0 1.382-.013 2.497-.013 2.837 0 .27.18.586.688.486A10.03 10.03 0 0 0 22 12.253C22 6.59 17.523 2 12 2Z" clip-rule="evenodd"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="transition-colors p-2 rounded-full hover:text-[#0A66C2] hover:bg-white/5 w-10 h-10 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.5 8.5h4V23h-4V8.5Zm7 0h3.84v1.98h.05c.54-1.02 1.86-2.1 3.83-2.1 4.1 0 4.86 2.7 4.86 6.2V23h-4v-6.5c0-1.55-.03-3.55-2.17-3.55-2.17 0-2.5 1.7-2.5 3.45V23h-4V8.5Z"/></svg>
+          </a>
+        </div>
+        <p class="text-sm text-neutral-400">Email: <a class="underline hover:text-white" href="mailto:suruizandrie@gmail.com">suruizandrie@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+    <button id="scroll-up" aria-label="Scroll to top" class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 rounded-full bg-white text-neutral-900 p-3 shadow-lg ring-1 ring-black/10 opacity-0 translate-y-4 pointer-events-none transition-all duration-300 ease-out">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+        <path d="M12 7a1 1 0 0 1 .7.3l6 6-1.4 1.4L12 9.4l-5.3 5.3L5.3 13l6-6A1 1 0 0 1 12 7Z"/>
+      </svg>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+ </html>
