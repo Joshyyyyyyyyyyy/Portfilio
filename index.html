@@ -38,7 +38,7 @@
               </svg>
             </button>
           </div>
-          <!-- MOBILE MENU lives OUTSIDE the h-12 row -->
+          <!-- MOBILE MENU -->
           <div id="mobile-menu" class="md:hidden w-full overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-out rounded-b-3xl bg-neutral-600/90">
             <div class="flex flex-col space-y-4 px-6 py-4 text-white/90 text-base">
               <a href="#home" class="hover:text-white mobile-link">Home</a>
@@ -50,7 +50,6 @@
           </div>
         </div>
       </div>
-      <!-- Backdrop for mobile menu -->
       <div id="mobile-backdrop" class="md:hidden fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 ease-out"></div>
     </div>
   </nav>
@@ -58,7 +57,6 @@
      <main>
    <section id="home" class="relative min-h-screen bg-neutral-900 text-white border-b border-neutral-800/80 pb-0 flex items-center scroll-mt-28">
       <div class="max-w-screen-2xl mx-auto px-6 lg:px-10 py-8 md:py-12 grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-6 items-center w-full reveal opacity-0 translate-y-8 transition-all duration-700 ease-out">
-        <!-- reduced right padding from lg:pr-20 to lg:pr-4 and reduced gap between columns to bring text closer to image -->
         <div class="space-y-7 self-center md:pr-4 lg:pr-4 z-10 max-w-xl text-center md:text-left" data-dir="left">
           <div class="flex items-center gap-4">
             <span class="px-3 py-1 bg-neutral-800 rounded text-sm">Hi, I am</span>
@@ -82,8 +80,7 @@
             </div>
           </div>
         </div>
-        <div class="hidden lg:block"><!-- spacer to balance grid on large screens --></div>
-        <!-- reduced text-right padding and adjusted spacing to bring right column closer to center image -->
+        <div class="hidden lg:block"></div>
         <div class="space-y-7 self-center hidden lg:block lg:pr-4" data-dir="right">
           <div class="flex items-center gap-4 justify-end">
             <span class="h-px w-32 bg-neutral-600"></span>
@@ -135,7 +132,7 @@
           <p class="text-neutral-400 mt-2">Selected work demonstrating design and development.</p>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- POS - JAVA -->
+          <!-- JAVA PROJECT -->
           <article class="rounded-2xl bg-neutral-800/50 ring-1 ring-white/5 overflow-hidden">
             <button type="button" class="group relative block h-56 w-full overflow-hidden" data-full="img/sales.png">
               <img src="img/sales.png" alt="Sale and Inventory Management System screenshot" class="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"/>
@@ -208,10 +205,8 @@
     <section id="skills" class="min-h-[70vh] md:min-h-screen bg-neutral-900 text-white border-b border-neutral-800/80 flex items-center scroll-mt-28">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-12 reveal opacity-0 translate-y-8 transition-all duration-700 ease-out" data-dir="right">
         <h2 class="text-3xl md:text-4xl font-extrabold mb-8 md:mb-12 text-center md:text-left">Skills</h2>
-        <!-- Icon-only marquee (real logos via Devicon) -->
         <div class="relative overflow-hidden rounded-2xl ring-1 ring-white/5 bg-neutral-800/30 py-4 md:py-6 px-2">
           <div class="flex items-center gap-8 md:gap-12 whitespace-nowrap" style="animation: slide-x 22s linear infinite alternate;">
-            <!-- track duplicated for seamless loop -->
             <div class="flex items-center gap-8 md:gap-12">
               <i aria-label="HTML" class="devicon-html5-plain colored text-[40px] md:text-[56px]"></i>
               <i aria-label="CSS" class="devicon-css3-plain colored text-[40px] md:text-[56px]"></i>
